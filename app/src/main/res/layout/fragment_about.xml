@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="275dp"
+        android:layout_height="228dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="59dp"
+        android:lineSpacingExtra="10sp"
+        android:text="Leader\nInnovator\n Enterpenuer\nOur vision is to create engineers, both men and women, to be entrepreneurial and innovative as well as technically trained, to transform engineering education in India so that they are capable of meeting the greatest global challenges of their era."
+        android:textAlignment="center" />                                                            \nInnovator"
+        android:textAlignment="center" />
+</RelativeLayout>
