@@ -1,6 +1,7 @@
 package com.example.pradeep.mectrail1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -82,6 +83,10 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        if (id == R.id.login) {
+            Intent i=new Intent(MainActivity.this, LoginFragment.class);
+            startActivity(i);
+        }
         if (id == R.id.about) {
             /*Context context = getApplicationContext();
             CharSequence text = "Hello toast!";
@@ -93,7 +98,8 @@ public class MainActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new AboutFragment()).commit();
 
             // Handle the camera action
-        } else if (id == R.id.about) {
+        }
+        else if (id == R.id.about) {
 
         } else if (id == R.id.faculty) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new AboutFragment()).commit();

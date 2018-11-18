@@ -18,7 +18,18 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity
+            android:name=".LoginFragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterFragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserFragment"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

@@ -2,6 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
+    <item
+        android:id="@+id/login"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Login/SignUp" />
 
     <group android:checkableBehavior="single">
         <item
