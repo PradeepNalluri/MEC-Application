@@ -100,6 +100,8 @@ public class MainActivity extends AppCompatActivity
             // Handle the camera action
         }
         else if (id == R.id.about) {
+            Intent i=new Intent(MainActivity.this, LoginFragment.class);
+            startActivity(i);
 
         } else if (id == R.id.faculty) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new AboutFragment()).commit();
