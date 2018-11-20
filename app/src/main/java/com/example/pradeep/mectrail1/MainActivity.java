@@ -95,7 +95,8 @@ public class MainActivity extends AppCompatActivity
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
             */
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new AboutFragment()).commit();
+            Intent i=new Intent(MainActivity.this, ChatActivity.class);
+            startActivity(i);
 
             // Handle the camera action
         }
