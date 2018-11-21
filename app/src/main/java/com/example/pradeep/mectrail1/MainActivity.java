@@ -90,17 +90,14 @@ public class MainActivity extends AppCompatActivity
             startActivity(i);
         }
         if (id == R.id.about) {
-            Intent i=new Intent(MainActivity.this, ChatActivity.class);
-            startActivity(i);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new AboutFragment()).commit();
+
         }
         else if (id == R.id.faculty) {
             Intent i=new Intent(MainActivity.this, FacultyActivity.class);
             startActivity(i);
 
-        } else if (id == R.id.faculty) {
-            Intent i=new Intent(MainActivity.this, FacultyActivity.class);
-            startActivity(i);
-        } else if (id == R.id.director) {
+        }  else if (id == R.id.director) {
 
         } else if (id == R.id.nav_share) {
 

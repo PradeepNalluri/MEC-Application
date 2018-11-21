@@ -1,8 +1,10 @@
 package com.example.pradeep.mectrail1;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.pradeep.mectrail1.R;
@@ -19,5 +21,9 @@ public class UserFragment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users);
 
+    }
+    public void buttonOnClick(View v){
+        Intent i=new Intent(UserFragment.this, ChatActivity.class);
+        startActivity(i);
     }
 }
