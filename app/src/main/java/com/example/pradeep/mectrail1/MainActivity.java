@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -88,22 +90,16 @@ public class MainActivity extends AppCompatActivity
             startActivity(i);
         }
         if (id == R.id.about) {
-            /*Context context = getApplicationContext();
-            CharSequence text = "Hello toast!";
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-            */
             Intent i=new Intent(MainActivity.this, ChatActivity.class);
             startActivity(i);
-
-            // Handle the camera action
         }
-        else if (id == R.id.about) {
+        else if (id == R.id.faculty) {
+            Intent i=new Intent(MainActivity.this, FacultyActivity.class);
+            startActivity(i);
 
         } else if (id == R.id.faculty) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new AboutFragment()).commit();
+            Intent i=new Intent(MainActivity.this, FacultyActivity.class);
+            startActivity(i);
         } else if (id == R.id.director) {
 
         } else if (id == R.id.nav_share) {

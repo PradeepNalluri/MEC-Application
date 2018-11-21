@@ -16,7 +16,6 @@
         android:layout_marginEnd="57dp"
         android:layout_marginBottom="59dp"
         android:lineSpacingExtra="10sp"
-        android:text="MEC's faculty is a mix of accomplished Indian and International academicians, all Ph.Ds, with a high degree of emphasis on research. MEC continues to attract a steady stream of International visiting faculty from École Centrale and its partner institutions."
         android:textAlignment="center" />
         android:textAlignment="center" />
 </RelativeLayout>
