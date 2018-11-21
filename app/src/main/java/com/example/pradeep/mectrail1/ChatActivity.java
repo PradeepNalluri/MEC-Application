@@ -28,8 +28,10 @@ import hani.momanii.supernova_emoji_library.Actions.EmojIconActions;
 import hani.momanii.supernova_emoji_library.Helper.EmojiconEditText;
 import hani.momanii.supernova_emoji_library.Helper.EmojiconTextView;
 public class ChatActivity extends AppCompatActivity {
+
     private FirebaseListAdapter<ChatMessage> adapter;
     RelativeLayout activity_chat;
+
     EmojiconEditText emojiconEditText;
     ImageView emojiButton,submitButton;
     EmojIconActions emojIconActions;
@@ -65,17 +67,33 @@ public class ChatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+        activity_chat = (RelativeLayout)findViewById(R.id.activity_chat);
 
-        submitButton=(ImageView)findViewById(R.id.submit_button);
+        emojiButton = (ImageView)findViewById(R.id.emoji_button);
+        submitButton = (ImageView)findViewById(R.id.submit_button);
+        emojiconEditText = (EmojiconEditText)findViewById(R.id.emojicon_edit_text);
+        emojIconActions = new EmojIconActions(getApplicationContext(),activity_chat,emojiButton,emojiconEditText);
+        emojIconActions.ShowEmojicon();
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FirebaseDatabase.getInstance().getReference().push().setValue(new ChatMessage(emojiconEditText.getText().toString(),
-                        "msg"));
+                        "user"));
+                emojiconEditText.setText("");
+                emojiconEditText.requestFocus();
             }
         });
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseDatabase.getInstance().getReference().push().setValue(new ChatMessage(emojiconEditText.getText().toString(),
+                        "User"));
+                emojiconEditText.setText("");
+                emojiconEditText.requestFocus();
+            }
+        });
+        Snackbar.make(activity_chat,"Welcome ",Snackbar.LENGTH_SHORT).show();
 
-        Snackbar.make(activity_chat,"Welcome msg",Snackbar.LENGTH_SHORT).show();
         //Load content
         displayChatMessage();
 
